@@ -77,15 +77,16 @@ _After the app is Deployed click the app url and make sure you got the "Success"
     1. On Root Directory click **"Edit"** button
     1. Now select frontend and click **"Continue"** button 
     1. Click **Environment Variables** and add this variables with your own values.
+ 
         | Name  | Value |
-| ------------- |:-------------:|
-| `NEXT_PUBLIC_NEAR_NETWORK`      | Type which near network your NFTs want to store `mainnet` or `testnet`      |
-| `NEXT_PUBLIC_OWNER`      | Enter your near wallet address  _(eg: chan.near )_    |
-| `NEXT_PUBLIC_CONTRACT_ID`     | Your Mintbase Store Address _(Eg: marmajchan.mintbase1.near)_     |
-| `NEXT_PUBLIC_REFERRAL_ID`      | Enter referral near wallet address  _(eg: marmaj.near )_       |
-| `NEXT_PUBLIC_BACKEND_URL`      | Enter the deployed Backend URL (eg: https://backendproject.vercel.app)        |
-| `NEXT_PUBLIC_SUPABASE_PROJECT_URL`     | Paste the your Supabase project URL (that you saved)     |
-| `NEXT_PUBLIC_SUPABASE_PROJECT_API_KEY` |  Paste the your Supabase API key (that you saved)  |
+        | ------------- |:-------------:|
+        | `NEXT_PUBLIC_NEAR_NETWORK`      | Type which near network your NFTs want to store `mainnet` or `testnet`      |
+        | `NEXT_PUBLIC_OWNER`      | Enter your near wallet address  _(eg: chan.near )_    |
+        | `NEXT_PUBLIC_CONTRACT_ID`     | Your Mintbase Store Address _(Eg: marmajchan.mintbase1.near)_     |
+        | `NEXT_PUBLIC_REFERRAL_ID`      | Enter referral near wallet address  _(eg: marmaj.near )_       |
+        | `NEXT_PUBLIC_BACKEND_URL`      | Enter the deployed Backend URL (eg: https://backendproject.vercel.app)        |
+        | `NEXT_PUBLIC_SUPABASE_PROJECT_URL`     | Paste the your Supabase project URL (that you saved)     |
+        | `NEXT_PUBLIC_SUPABASE_PROJECT_API_KEY` |  Paste the your Supabase API key (that you saved)  |
     1. Click **"Deploy"** 
 > Make sure the backend URL is entered without backslash at the end of URL, Enter as https://backendproject.vercel.app not https://backendproject.vercel.app/
     
