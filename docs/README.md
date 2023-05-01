@@ -55,12 +55,12 @@
     1. Now select backend and click **"Continue"** button 
     1. Click Environment Variables and add this variables with your own values.
     
-      | Name  | Value |
-      | ------------- |:-------------:|
-      | `NEAR_NETWORK`      | Type which near network your NFTs want to store `mainnet` or `testnet`      |
-      | `OWNER_WALLET`      | Enter your near wallet address      |
-      | `DB_CONNECTION_URL`     | Paste the Mongodb database connection string here     |
-      
+       | Name  | Value |
+       | ------------- |:-------------:|
+       | `NEAR_NETWORK`      | Type which near network your NFTs want to store `mainnet` or `testnet`      |
+       | `OWNER_WALLET`      | Enter your near wallet address      |
+       | `DB_CONNECTION_URL`     | Paste the Mongodb database connection string here     |
+
     > make sure the <password\> in connection string is replaced with your database user password
     
    1. Click **"Deploy"** 
