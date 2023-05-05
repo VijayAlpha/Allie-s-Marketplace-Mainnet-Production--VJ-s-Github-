@@ -15,31 +15,39 @@
 #### Steps to create database connection URL:
 
 1. Open MongoDB Atlas and login/create your account.
-1. Create new project [_refer docs here if you want_](https://www.mongodb.com/docs/atlas/government/tutorial/create-project/)
-1.Click Connect and select drive in options and copy the connection string, **save** the string along with the user password somewhere else for later use while deploying the backend.Replace the <password> to user password in connection string.
-1.We have to set the network access to anywhere to run our app in vercel.
-  1. Go to network access tab in left corner of the screen
-  1. Click the "add ip address" button on the top right side of the screen in the network section.
-  1. Click "allow access from anywhere" and save.
+1. Create a new project (refer to the [documentation](https://www.mongodb.com/docs/atlas/government/tutorial/create-project/) if needed).
+1. Click "Connect" and select "Connect Your Application".
+1. Copy the connection string and replace `<password>` with your user password. Save this string and password for later use when deploying the backend.
+1. To set the network access to "Allow access from anywhere" to run the app in Vercel:
+    1. Go to the "Network Access" tab on the left side of the screen.
+    1. Click the "Add IP Address" button on the top right of the screen in the "Network Access" section.
+    1. Click "Allow Access From Anywhere" and save.
 
 ### Supabase
  To store the collection images on supabase we need API key and Project url. 
  
  
 #### Steps to create supabase storage:
-
 1. Open Supabase and login/create your account.
-1. Click "new project" button on top of your supabse dashboard
-1. Enter your project name and create the project.
-1. To create the storage bucket 
-    1. Go to the storage tab and click the "new bucket" button on top left.
-    1. Type the bucket as **"collectionimages"** - _make sure you gave the  bucket name as collectionimages correctly_
-    1. click the Public bucket on and save.
-1.Now to connect our app with our supabse storage we want an API key.
+2. Click the "New Project" button on top of your Supabase dashboard.
+3. Enter your project name and create the project.
+4. To create the storage bucket:
+    1. Go to the "Storage" tab and click the "**New Bucket**" button on the top left.
+    2. Type the bucket as **"collectionimages"** - _make sure you give the bucket name as "collectionimages" correctly_.
+    3. Toggle the Public bucket on and click save.
+5. Now the bucket is created. To access the bucket from our app, we have to add a policy.
+    1. Go to the storage page and on the left side, you can see the Configuration. Below that, there is a "Policies" section.
+    2. Go to "**Policies**" and click the "**New Policy**" button in the "**Other policies under storage.objects**" section.
+    3. Click "Get started quickly" and use the "Enable read access to everyone" template. 
+    4. Select **ALL** as an option in the "**Allowed operation**" category.
+    5. Click "**Review**" and "**Save Policy**".
+    6. Done! You created the policy.
+6. Now, to connect our app with our Supabase storage, we need an API key.
     1. To get our API key and URL, go to the project settings tab.
-    1. In project settings click **API**.
-    1. Now you can see your Project URL and Project API keys There.
-    1. Copy those two and save it somewhere else for later use.
+    2. In project settings, click **API**.
+    3. Now you can see your Project URL and Project API keys there.
+    4. Copy those two and save them somewhere else for later use.
+
 
 ### Backend Deployment
  To deploy our backend node.js app we are using vercel. 
@@ -54,13 +62,12 @@
     1. On Root Directory click **"Edit"** button
     1. Now select backend and click **"Continue"** button 
     1. Click Environment Variables and add this variables with your own values.
-    
        | Name  | Value |
        | ------------- |:-------------:|
        | `NEAR_NETWORK`      | Type which near network your NFTs want to store `mainnet` or `testnet`      |
        | `OWNER_WALLET`      | Enter your near wallet address      |
        | `DB_CONNECTION_URL`     | Paste the Mongodb database connection string here     |
-   1. Click **"Deploy"** 
+    1. Click **"Deploy"** 
    > make sure the <password\> in connection string is replaced with your database user password
 1. wait till the deployment is over and you can see the congratulations message.
 
@@ -77,7 +84,6 @@ _After the app is Deployed click the app url and make sure you got the "Success"
     1. On Root Directory click **"Edit"** button
     1. Now select frontend and click **"Continue"** button 
     1. Click **Environment Variables** and add this variables with your own values.
- 
         | Name  | Value |
         | ------------- |:-------------:|
         | `NEXT_PUBLIC_NEAR_NETWORK`      | Type which near network your NFTs want to store `mainnet` or `testnet`      |
