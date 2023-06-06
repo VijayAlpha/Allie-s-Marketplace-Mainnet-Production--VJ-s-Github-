@@ -86,7 +86,7 @@ export const NavBar = () => {
                   </li>
                 )}
 
-                <li
+                {/* <li
                   className="header__nav-item"
                   onClick={() => {
                     setToggle(false);
@@ -95,7 +95,7 @@ export const NavBar = () => {
                   <Link href="/tipme" className="header__nav-link">
                     Tip me
                   </Link>
-                </li>
+                </li> */}
               </ul>
             ) : (
               <ul className="header__nav mb-0">
